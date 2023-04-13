@@ -1,0 +1,99 @@
+:root {
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Manrope;
+    background: var(--DarkBlue);
+}
+
+.container {
+    position: relative;
+    max-width: 550px;
+    /* height: 350px; */
+    background: var(--DarkGrayishBlue);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 40px 0px rgba(0, 0, 0, .1);
+}
+
+.container .num-advice {
+    color: var(--NeonGreen);
+    text-transform: uppercase;
+    margin: 30px 0 0;
+    font-size: 14px;
+    letter-spacing: .2rem;
+    font-weight: 800;
+}
+
+.container .advice {
+    text-align: center;
+    color: var(--LightCyan);
+    font-size: 28px;
+    font-weight: 800;
+    margin: 40px 20px;
+}
+
+.sep-desktop {
+    margin-bottom: 50px;
+}
+
+.sep-mobile {
+    display: none;
+}
+
+button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: var(--NeonGreen);
+    bottom: 0;
+    transform: translateY(50%);
+    cursor: pointer;
+}
+button:hover {
+    box-shadow: 0 0 30px var(--NeonGreen);
+}
+
+button img {
+    position: relative;
+    top: 3px;
+}
+
+@media screen and (max-width: 590px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .sep-desktop {
+        display: none;
+    }
+    
+    .sep-mobile {
+        display: block;
+        margin-bottom: 50px;
+        width: 90%;
+    }
+    
+}
